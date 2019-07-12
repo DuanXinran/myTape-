@@ -1,0 +1,60 @@
+<Navigate ></Navigate>
+<view  class="video">
+<!-- <video src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"></video> -->
+<video src="{{movieDetail.src}}"></video>
+</view>
+<view class="title">
+{{movieDetail.title}}
+</view>
+<view   class="info" >
+
+--{{movieDetail.commentCount}} 观看  
+{{movieDetail.playMsg}} 弹幕  
+{{movieDetail.upDate}} --
+</view >
+<view class="select flex-wrp">
+<button class="tuijian flex-item {{boolean==true ? 'active':' '}}" bindtap='change1'>推荐列表</button>  <button class="pinglun flex-item {{boolean1==true ? 'active':' '}}" bindtap='change' open-type='getUserInfo' bindgetuserinfo='onGotUserInfo' >评论</button><br/>
+</view>
+<view class='recommon' wx:if="{{boolean==true}}">
+
+<navigator  url="./../detail/detail?id={{item.id}}" wx:for="{{recomList}}" wx:key="{{index}}" >
+<view class="image"> <image mode="widthFix" src="{{item.imgSrc}}"></image>
+<view class="duration"> {{item.duration}}</view>
+<view class="commentCount"> {{item.commentCount}} 观看</view>
+<view class="playMsg"> {{item.playMsg}} 弹幕</view>
+
+</view>
+<view class="recomListTitle">
+{{item.title}}
+</view>
+</navigator>
+
+</view>
+
+
+<view class="commentTotal" wx:if="{{boolean1==true}}"> 
+<view>
+<image class="comment-img" wx:for="{{images}}" wx:key="{{index}}" src="{{item}}"></image>
+</view>
+<view class="comment">
+<van-field class="input"  value='{{content}}' placeholder="说点什么吧" bind:change="onContentChange"/>
+
+ <van-button round  class="button" bindtap='uploadImg'><image class="button-img" src="./../../images/image.png" bindtap='uploadImg'></image></van-button>
+
+ <van-button round  class="button"  bindtap='submit'  ><image class="button-img" src="./../../images/up.png" bindtap='submit'></image></van-button>
+</view><br/>
+
+<view class="comment-list">
+<view  wx:for="{{commentList}}" wx:key="{{index}}" class="comments">
+<view><image src="{{item.avatar}}"></image> <view class="username">{{item.nickName}}</view><view class="time">{{item.time}}</view></view>
+<view class="content">{{item.content}}  <image wx:for="{{item.fileIds}}" wx:key="{{index}}" src="{{item}}"></image></view>
+
+</view>
+
+
+</view>
+</view>
+
+
+
+

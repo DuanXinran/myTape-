@@ -1,0 +1,99 @@
+/* pages/movie/movie.wxss */
+
+
+/* miniprogram/components/Navigate/Navigate.wxss */
+
+.navigate{
+  white-space:  nowrap;
+  padding: 5rpx 0 ;
+  display: flex;
+}
+.navigate ::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+.navigateList{
+display: inline-block;
+text-align: center;
+font-size: 30rpx;
+width:20vw;
+}
+.navigateList.active{
+  border-bottom:5rpx solid #1296db; 
+}
+
+.Swiper{
+  height: 300rpx;
+  margin: 5rpx 5rpx 5rpx 5rpx;
+  overflow:hidden;
+ 
+  
+}
+.swiperlist{
+
+  width: 100%;
+}
+.swiperlist image{
+ width: 100%;
+}
+
+
+.movieList{
+ display: flex;
+ flex-wrap: wrap;
+ padding: 5rpx;
+ justify-content: space-between;
+ 
+}
+
+
+navigator{
+  width: 49%;
+  margin-bottom: 5rpx;
+ 
+}
+.image{
+   font-size: 20rpx;
+   color: white;
+    position: relative;
+}
+.image image{
+ border-radius: 10rpx;
+ width: 100%;
+}
+.image view{
+  background: rgba(169, 169, 169, 0.315);
+  overflow: hidden;
+  border-radius: 8rpx;
+}
+.duration{
+position: absolute;
+bottom: 20rpx;
+margin-left: 10%;
+}
+.commentCount{
+position: absolute;
+bottom: 20rpx;
+margin-left:40%;
+} 
+.playMsg{
+position: absolute;
+bottom: 20rpx;
+margin-left: 70%;
+}
+
+
+.movieListTitle{
+  font-size: 28rpx;
+  color: rgb(66, 66, 66);
+  text-overflow:ellipsis;
+
+ overflow:hidden;
+
+ display:-webkit-box;
+
+ -webkit-line-clamp:2; 
+
+ -webkit-box-orient:vertical;
+}

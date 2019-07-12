@@ -1,0 +1,17 @@
+<view class="myNavigate">
+<navigator  url="../../pages/movie/movie" class="logo" open-type="switchTab"  hover-class="none">
+<image class="logo-image" src="./../../images/myTape.png"></image>
+</navigator>
+<view class="enter"></view>
+<view class="search">
+<image class="search-image" src="./../../images/search.png"></image>
+</view>
+<view class="user">
+<!-- <image class="user-image" src="./../../images/user.png"></image> -->
+<open-data class="user-image " type="userAvatarUrl"></open-data>
+</view>
+<button class="download">下载APP</button>
+
+</view>
+
+

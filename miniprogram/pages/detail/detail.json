@@ -1,0 +1,8 @@
+{ "navigationBarTitleText": "视频详情",
+  "usingComponents": {
+    "van-button": "vant-weapp/button",
+    "van-field":"vant-weapp/field",
+    
+    "Navigate": "./../components/Navigate/Navigate"
+  }
+}

@@ -1,0 +1,6 @@
+{ "navigationBarTitleText": "myTape",
+  "usingComponents": {
+   "van-button": "vant-weapp/button",
+   "Navigate":"./../components/Navigate/Navigate"
+  }
+}

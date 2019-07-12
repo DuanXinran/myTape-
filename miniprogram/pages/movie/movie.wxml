@@ -1,0 +1,36 @@
+<Navigate ></Navigate>
+<scroll-view class="navigate" scroll-x >
+<view bindtap="activeChange" data-index="{{index}}" 
+class="navigateList {{index==selectIndex ? 'active':' '}}" 
+ wx:for="{{navigateList}}" wx:key="{{index}}">
+{{item.title}}
+</view>
+</scroll-view> 
+
+<view class="Swiper">
+<swiper autoplay indicator-dots  circular>
+<swiper-item wx:for="{{swiperList}}" wx:key="{{index}}"> 
+<navigator class="swiperlist" >
+<image  src="{{item.imgSrc}}"></image>
+</navigator>
+</swiper-item>
+</swiper>
+</view>
+
+
+<view  class="movieList">
+<navigator  url="./../detail/detail?id={{item.id}}" wx:for="{{movieList}}" wx:key="{{index}}" >
+<view class="image"> <image mode="widthFix" src="{{item.imgSrc}}"></image>
+<view class="duration"> {{item.duration}}</view>
+<view class="commentCount"> {{item.commentCount}} 观看</view>
+<view class="playMsg"> {{item.playMsg}} 弹幕</view>
+
+</view>
+<view class="movieListTitle">
+{{item.title}}
+</view>
+</navigator>
+</view>
+
+
+
